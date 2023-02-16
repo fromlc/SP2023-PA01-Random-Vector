@@ -1,5 +1,6 @@
-// PA01-Random-Vector.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//------------------------------------------------------------------------------
+// PA01-Random-Vector.cpp : solution code
+//------------------------------------------------------------------------------
 
 #include <cstdlib>
 #include <iostream>
