@@ -1,5 +1,8 @@
 //------------------------------------------------------------------------------
 // PA01-Random-Vector.cpp : solution code
+// 
+// std::vector reference page at cplusplus.com:
+// https://cplusplus.com/reference/vector/vector/
 //------------------------------------------------------------------------------
 
 #include <cstdlib>
@@ -29,12 +32,15 @@ bool getMax(int&);
 int main() {
 
     vector<int> vi;
-    int maxRand;
+    //vi.reserve(1000);
 
     // app banner
     cout << "\nGenerate random numbers from 1 to n, inclusive\n\n";
 
+    //srand((unsigned int)time(0));
+
     // exit loop on 0 input
+    int maxRand;
     while (getMax(maxRand)) {
 
         // generate random numbers from 1 to user's max
@@ -43,15 +49,18 @@ int main() {
         }
 
         // display in forward order
-        for (int i = 0; i < ITEMCOUNT; ++i) {
+        for (int i = 0; i < vi.size(); ++i) {
+        //for (int i = 0; i < ITEMCOUNT; ++i) {
             cout << vi.at(i) << ' ';
+            //cout << vi[i] << ' ';
         }
         cout << '\n';
 
         // display in backwards order
+        //while (!vi.empty()) {
         for (int i = 0; i < ITEMCOUNT; ++i) {
             cout << vi.back() << ' ';
-            vi.pop_back();
+            //vi.pop_back();
         }
         cout << "\n\n";
     }
